@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3250726B1AC0226C0050F00C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3250726A1AC0226C0050F00C /* main.m */; };
+		3250726E1AC0226C0050F00C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3250726D1AC0226C0050F00C /* AppDelegate.m */; };
+		325072711AC0226C0050F00C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325072701AC0226C0050F00C /* ViewController.m */; };
+		325072741AC0226C0050F00C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325072721AC0226C0050F00C /* Main.storyboard */; };
+		325072761AC0226C0050F00C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325072751AC0226C0050F00C /* Images.xcassets */; };
+		325072791AC0226C0050F00C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 325072771AC0226C0050F00C /* LaunchScreen.xib */; };
+		325072851AC0226C0050F00C /* KMPTextureExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 325072841AC0226C0050F00C /* KMPTextureExampleTests.m */; };
+		325072921AC022B00050F00C /* aaa.json in Resources */ = {isa = PBXBuildFile; fileRef = 3250728F1AC022B00050F00C /* aaa.json */; };
+		325072931AC022B00050F00C /* aaa.png in Resources */ = {isa = PBXBuildFile; fileRef = 325072901AC022B00050F00C /* aaa.png */; };
+		325072941AC022B00050F00C /* aaa.tps in Resources */ = {isa = PBXBuildFile; fileRef = 325072911AC022B00050F00C /* aaa.tps */; };
+		325072981AC022BB0050F00C /* UIImage+texture.m in Sources */ = {isa = PBXBuildFile; fileRef = 325072971AC022BB0050F00C /* UIImage+texture.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3250727F1AC0226C0050F00C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3250725D1AC0226C0050F00C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 325072641AC0226C0050F00C;
+			remoteInfo = KMPTextureExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		325072651AC0226C0050F00C /* KMPTextureExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMPTextureExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		325072691AC0226C0050F00C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3250726A1AC0226C0050F00C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3250726C1AC0226C0050F00C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3250726D1AC0226C0050F00C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3250726F1AC0226C0050F00C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		325072701AC0226C0050F00C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		325072731AC0226C0050F00C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		325072751AC0226C0050F00C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		325072781AC0226C0050F00C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3250727E1AC0226C0050F00C /* KMPTextureExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMPTextureExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		325072831AC0226C0050F00C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		325072841AC0226C0050F00C /* KMPTextureExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMPTextureExampleTests.m; sourceTree = "<group>"; };
+		3250728F1AC022B00050F00C /* aaa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = aaa.json; sourceTree = "<group>"; };
+		325072901AC022B00050F00C /* aaa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aaa.png; sourceTree = "<group>"; };
+		325072911AC022B00050F00C /* aaa.tps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = aaa.tps; sourceTree = "<group>"; };
+		325072961AC022BB0050F00C /* UIImage+texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+texture.h"; sourceTree = "<group>"; };
+		325072971AC022BB0050F00C /* UIImage+texture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+texture.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		325072621AC0226C0050F00C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3250727B1AC0226C0050F00C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3250725C1AC0226C0050F00C = {
+			isa = PBXGroup;
+			children = (
+				325072671AC0226C0050F00C /* KMPTextureExample */,
+				325072811AC0226C0050F00C /* KMPTextureExampleTests */,
+				325072661AC0226C0050F00C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		325072661AC0226C0050F00C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				325072651AC0226C0050F00C /* KMPTextureExample.app */,
+				3250727E1AC0226C0050F00C /* KMPTextureExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		325072671AC0226C0050F00C /* KMPTextureExample */ = {
+			isa = PBXGroup;
+			children = (
+				325072951AC022BB0050F00C /* UIImage+texture */,
+				3250728E1AC022B00050F00C /* Resource */,
+				3250726C1AC0226C0050F00C /* AppDelegate.h */,
+				3250726D1AC0226C0050F00C /* AppDelegate.m */,
+				3250726F1AC0226C0050F00C /* ViewController.h */,
+				325072701AC0226C0050F00C /* ViewController.m */,
+				325072721AC0226C0050F00C /* Main.storyboard */,
+				325072751AC0226C0050F00C /* Images.xcassets */,
+				325072771AC0226C0050F00C /* LaunchScreen.xib */,
+				325072681AC0226C0050F00C /* Supporting Files */,
+			);
+			path = KMPTextureExample;
+			sourceTree = "<group>";
+		};
+		325072681AC0226C0050F00C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				325072691AC0226C0050F00C /* Info.plist */,
+				3250726A1AC0226C0050F00C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		325072811AC0226C0050F00C /* KMPTextureExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				325072841AC0226C0050F00C /* KMPTextureExampleTests.m */,
+				325072821AC0226C0050F00C /* Supporting Files */,
+			);
+			path = KMPTextureExampleTests;
+			sourceTree = "<group>";
+		};
+		325072821AC0226C0050F00C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				325072831AC0226C0050F00C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3250728E1AC022B00050F00C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				3250728F1AC022B00050F00C /* aaa.json */,
+				325072901AC022B00050F00C /* aaa.png */,
+				325072911AC022B00050F00C /* aaa.tps */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		325072951AC022BB0050F00C /* UIImage+texture */ = {
+			isa = PBXGroup;
+			children = (
+				325072961AC022BB0050F00C /* UIImage+texture.h */,
+				325072971AC022BB0050F00C /* UIImage+texture.m */,
+			);
+			name = "UIImage+texture";
+			path = "../../UIImage+texture";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		325072641AC0226C0050F00C /* KMPTextureExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 325072881AC0226C0050F00C /* Build configuration list for PBXNativeTarget "KMPTextureExample" */;
+			buildPhases = (
+				325072611AC0226C0050F00C /* Sources */,
+				325072621AC0226C0050F00C /* Frameworks */,
+				325072631AC0226C0050F00C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KMPTextureExample;
+			productName = KMPTextureExample;
+			productReference = 325072651AC0226C0050F00C /* KMPTextureExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3250727D1AC0226C0050F00C /* KMPTextureExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3250728B1AC0226C0050F00C /* Build configuration list for PBXNativeTarget "KMPTextureExampleTests" */;
+			buildPhases = (
+				3250727A1AC0226C0050F00C /* Sources */,
+				3250727B1AC0226C0050F00C /* Frameworks */,
+				3250727C1AC0226C0050F00C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				325072801AC0226C0050F00C /* PBXTargetDependency */,
+			);
+			name = KMPTextureExampleTests;
+			productName = KMPTextureExampleTests;
+			productReference = 3250727E1AC0226C0050F00C /* KMPTextureExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3250725D1AC0226C0050F00C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = kumapower;
+				TargetAttributes = {
+					325072641AC0226C0050F00C = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					3250727D1AC0226C0050F00C = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 325072641AC0226C0050F00C;
+					};
+				};
+			};
+			buildConfigurationList = 325072601AC0226C0050F00C /* Build configuration list for PBXProject "KMPTextureExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3250725C1AC0226C0050F00C;
+			productRefGroup = 325072661AC0226C0050F00C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				325072641AC0226C0050F00C /* KMPTextureExample */,
+				3250727D1AC0226C0050F00C /* KMPTextureExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		325072631AC0226C0050F00C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325072741AC0226C0050F00C /* Main.storyboard in Resources */,
+				325072791AC0226C0050F00C /* LaunchScreen.xib in Resources */,
+				325072931AC022B00050F00C /* aaa.png in Resources */,
+				325072941AC022B00050F00C /* aaa.tps in Resources */,
+				325072761AC0226C0050F00C /* Images.xcassets in Resources */,
+				325072921AC022B00050F00C /* aaa.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3250727C1AC0226C0050F00C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		325072611AC0226C0050F00C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325072711AC0226C0050F00C /* ViewController.m in Sources */,
+				325072981AC022BB0050F00C /* UIImage+texture.m in Sources */,
+				3250726E1AC0226C0050F00C /* AppDelegate.m in Sources */,
+				3250726B1AC0226C0050F00C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3250727A1AC0226C0050F00C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325072851AC0226C0050F00C /* KMPTextureExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		325072801AC0226C0050F00C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 325072641AC0226C0050F00C /* KMPTextureExample */;
+			targetProxy = 3250727F1AC0226C0050F00C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		325072721AC0226C0050F00C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				325072731AC0226C0050F00C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		325072771AC0226C0050F00C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				325072781AC0226C0050F00C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		325072861AC0226C0050F00C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		325072871AC0226C0050F00C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		325072891AC0226C0050F00C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KMPTextureExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3250728A1AC0226C0050F00C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KMPTextureExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3250728C1AC0226C0050F00C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KMPTextureExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMPTextureExample.app/KMPTextureExample";
+			};
+			name = Debug;
+		};
+		3250728D1AC0226C0050F00C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KMPTextureExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMPTextureExample.app/KMPTextureExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		325072601AC0226C0050F00C /* Build configuration list for PBXProject "KMPTextureExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325072861AC0226C0050F00C /* Debug */,
+				325072871AC0226C0050F00C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		325072881AC0226C0050F00C /* Build configuration list for PBXNativeTarget "KMPTextureExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325072891AC0226C0050F00C /* Debug */,
+				3250728A1AC0226C0050F00C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3250728B1AC0226C0050F00C /* Build configuration list for PBXNativeTarget "KMPTextureExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3250728C1AC0226C0050F00C /* Debug */,
+				3250728D1AC0226C0050F00C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3250725D1AC0226C0050F00C /* Project object */;
+}

@@ -14,10 +14,11 @@
 - (CGRect)sliceFrameWithFrameInfo:(NSDictionary *)frameInfo
 {
     NSDictionary *imageFrame = frameInfo[@"frame"];
+    BOOL rotated = [self rotateInfoWithFrameInfo:frameInfo];
     return CGRectMake([imageFrame[@"x"] doubleValue],
                       [imageFrame[@"y"] doubleValue],
-                      [imageFrame[@"w"] doubleValue],
-                      [imageFrame[@"h"] doubleValue]);
+                      [imageFrame[rotated ? @"h" : @"w"] doubleValue],
+                      [imageFrame[rotated ? @"w" : @"h"] doubleValue]);
 }
 
 - (CGRect)sliceSourceFrameWithFrameInfo:(NSDictionary *)frameInfo
@@ -53,9 +54,7 @@
     CGRect sourceFrame = [self sliceSourceFrameWithFrameInfo:frameInfo];
     BOOL rotated = [self rotateInfoWithFrameInfo:frameInfo];
     
-    CGRect rotatedFrame = rotated ? CGRectMake(sliceFrame.origin.x, sliceFrame.origin.y, sliceFrame.size.height, sliceFrame.size.width) : sliceFrame;
-    
-    CGImageRef imageRef = CGImageCreateWithImageInRect([self CGImage], rotatedFrame);
+    CGImageRef imageRef = CGImageCreateWithImageInRect([self CGImage], sliceFrame);
     
     //TODO: Some work for the scale factor
     UIGraphicsBeginImageContext(sourceSize);
@@ -64,15 +63,15 @@
     CGContextScaleCTM(context, 1.0, -1.0);
     if (rotated) {
         CGContextRotateCTM(context, 90.0 * M_PI / 180.0);
-        CGContextTranslateCTM(context, -sliceFrame.size.height, -sliceFrame.size.width);
+        CGContextTranslateCTM(context, -sliceFrame.size.width, -sliceFrame.size.height);
     }else{
         CGContextTranslateCTM(context, 0, -sliceFrame.size.height);
     }
-
-    CGContextDrawImage(context, CGRectMake(rotated ? -sourceFrame.origin.x : sourceFrame.origin.x,
-                                           -sourceFrame.origin.y,
-                                           rotatedFrame.size.width,
-                                           rotatedFrame.size.height), imageRef);
+    
+    CGContextDrawImage(context, CGRectMake(rotated ? -sourceFrame.origin.y : sourceFrame.origin.x,
+                                           rotated ? -sourceFrame.origin.x : -sourceFrame.origin.y,
+                                           sliceFrame.size.width,
+                                           sliceFrame.size.height), imageRef);
     
     UIImage *slice = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -86,21 +85,21 @@
     CGRect sliceFrame = [self sliceFrameWithFrameInfo:frameInfo];
     BOOL rotated = [self rotateInfoWithFrameInfo:frameInfo];
     
-    CGRect rotatedFrame = rotated ? CGRectMake(sliceFrame.origin.x, sliceFrame.origin.y, sliceFrame.size.height, sliceFrame.size.width) : sliceFrame;
-    
-    CGImageRef imageRef = CGImageCreateWithImageInRect([self CGImage], rotatedFrame);
+    CGImageRef imageRef = CGImageCreateWithImageInRect([self CGImage], sliceFrame);
     
     UIImage *slice;
     if (rotated) {
+        CGSize drawSize = CGSizeMake(sliceFrame.size.height, sliceFrame.size.width);
+        
         //TODO: Some work for the scale factor
-        UIGraphicsBeginImageContext(sliceFrame.size);
+        UIGraphicsBeginImageContext(drawSize);
         CGContextRef context = UIGraphicsGetCurrentContext();
         
         CGContextScaleCTM(context, 1.0, -1.0);
         CGContextRotateCTM(context, 90.0 * M_PI / 180.0);
-        CGContextTranslateCTM(context, -sliceFrame.size.height, -sliceFrame.size.width);
+        CGContextTranslateCTM(context, -sliceFrame.size.width, -sliceFrame.size.height);
         
-        CGContextDrawImage(context, CGRectMake(0, 0, rotatedFrame.size.width, rotatedFrame.size.height), imageRef);
+        CGContextDrawImage(context, CGRectMake(0, 0, sliceFrame.size.width, sliceFrame.size.height), imageRef);
         
         slice = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();

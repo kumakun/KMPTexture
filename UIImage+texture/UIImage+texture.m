@@ -87,8 +87,23 @@
     
     CGImageRef imageRef = CGImageCreateWithImageInRect([self CGImage], rotatedFrame);
     
-    //TODO: Some work for the scale factor
-    UIImage *slice = [UIImage imageWithCGImage:imageRef scale:1.0 orientation:rotated ? UIImageOrientationRight : UIImageOrientationUp];
+    UIImage *slice;
+    if (rotated) {
+        UIGraphicsBeginImageContext(sliceFrame.size);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        
+        CGContextScaleCTM(context, 1.0, -1.0);
+        CGContextRotateCTM(context, 90.0 * M_PI/180.0);
+        CGContextTranslateCTM(context, -sliceFrame.size.height, -sliceFrame.size.width);
+        
+        CGContextDrawImage(context, CGRectMake(0, 0, rotatedFrame.size.width, rotatedFrame.size.height), imageRef);
+        
+        slice = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    }else{
+        //TODO: Some work for the scale factor
+        slice = [UIImage imageWithCGImage:imageRef scale:1.0 orientation:UIImageOrientationUp];
+    }
     
     objc_setAssociatedObject(slice, @selector(getSourceOrigin), NSStringFromCGPoint([self sliceSourceFrameWithFrameInfo:frameInfo].origin), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
